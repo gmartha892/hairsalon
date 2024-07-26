@@ -1,0 +1,448 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Clear fix */
+.clear {
+  clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 10px 20px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+nav img {
+  max-height: 30px;
+}
+
+.book-online {
+  display: flex;
+  align-items: center;
+}
+
+.book-online .line {
+  width: 2px;
+  height: 20px;
+  background-color: #333;
+  margin-right: 10px;
+}
+
+.book-online button {
+  border: none;
+  background: none;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+}
+
+.logo {
+  font-family: 'Lobster', 'Great Vibes', 'Pacifico', 'Dancing Script', 'Allura', cursive;
+  font-size: 24px;
+  color: black;
+  text-decoration: none;
+}
+
+/* Styles for highlight section */
+.highlight-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: hsl(0, 0%, 100%);
+  background-image: url('https://images.pexels.com/photos/1321916/pexels-photo-1321916.jpeg?auto=compress&cs=tinysrgb&w=600');
+  background-size: 660px;
+  background-position: center;
+  flex-direction: row;
+}
+
+.left-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.right-column {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Added this line */
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-size: 14px;
+  color: #333;
+}
+
+.highlight-section h1 {
+  margin: 0;
+  color: white;
+  font-size: 100px;
+}
+
+.highlight-section span {
+  margin-top: 10px;
+  color: white;
+}
+
+.highlight-section button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: 2px solid black;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.highlight-description {
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+  color: #555;
+}
+
+.promo-box {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin: 20px 0;
+  max-width: 200px;
+}
+
+.promo-content {
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+.promo-content h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.promo-content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.promo-button {
+  border: 2px solid white;
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.three-columns {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.three-columns div {
+  text-align: center;
+  flex: 1;
+  margin: 0 10px;
+}
+
+.three-columns img {
+  max-width: 100px;
+  margin-bottom: 10px;
+}
+
+.three-columns span {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.three-columns p {
+  margin: 0;
+}
+
+/* Styles for left and right columns in the 'Make Your Own Momentum' section */
+section.clearfix {
+  background-color: #f0f0f0; /* Light grey background color */
+  padding: 10px; /* Add some padding */
+  display: flex; /* Use flex to position items */
+}
+
+.left-column {
+  flex: 2; /* Adjusted to take up 66% of the width */
+  padding: 10px;
+  max-width: 600px; /* Ensure the video does not exceed this width */
+
+}
+
+.left-column h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.left-column p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.left-column button {
+  border: 2px solid black;
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.right-column {
+  flex: 1; /* Adjusted to take up 33% of the width */
+  padding: 20px;
+  display: center;
+  justify-content: center; /* Align the video to the right */
+  align-items: center; /* Center the video vertically */
+}
+
+.right-column video {
+  width: 100%; /* Adjust as needed */
+  max-width: 400px; /* Ensure the video does not exceed this width */
+  height: auto; /* Maintain the aspect ratio */
+}
+
+.three-employees {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 0;
+}
+
+.three-employees div {
+  position: relative;
+  text-align: center;
+  max-width: 300px;
+}
+
+.three-employees img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.three-employees span,
+.three-employees p {
+  font-size: 16px;
+  color: white;
+  background-color: black;
+  padding: 1px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .highlight-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .highlight-section h1 {
+    font-size: 60px;
+  }
+
+  .three-columns {
+    flex-direction: column;
+  }
+
+  .three-columns div {
+    margin-bottom: 20px;
+  }
+
+  .three-employees {
+    flex-direction: column;
+  }
+
+  .three-employees div {
+    margin-bottom: 20px;
+  }
+
+  .right-column video {
+    width: 100%; /* Ensure the video adjusts to its container */
+    height: auto; /* Ensure the video height adjusts proportionally */
+  }
+}
+
+@media (max-width: 480px) {
+  
+  .highlight-section h1 {
+    font-size: 40px;
+  }
+
+  .highlight-section button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .promo-box {
+    padding: 10px;
+  }
+
+  .promo-content h2 {
+    font-size: 20px;
+  }
+
+  .promo-content p {
+    font-size: 30px;
+  }
+
+  .promo-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+/* Hover Effects */
+nav ul li a:hover {
+  color: #555;
+}
+/* Background image for the promo section */
+.promo-section {
+  background-image: url('https://media.istockphoto.com/id/1191637573/photo/happy-middle-aged-woman-looking-at-free-space-gray-background.jpg?s=612x612&w=0&k=20&c=uPzslrs4Z0R7jOoY0Yfp-dP62X020gmIE7mNGyLtYEk='); /* Replace with your actual image path */
+  background-size: cover; /* Ensure the background image covers the entire section */
+  background-position: center; /* Center the background image */
+  padding: 20px; /* Add padding to the section */
+  color: white; /* Ensure text is visible on the background image */
+  text-align: left; /* Center-align the text within the section */
+  position: relative;
+}
+
+.promo-color {
+  padding: 50px;
+  border-radius: 5px; /* Adds rounded corners */
+}
+
+.promo-appt-button {
+  border: 2px solid rgb(0, 0, 0);
+  background-color: rgb(0, 0, 0);
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.book-online button:hover {
+  color: #555;
+}
+
+.highlight-section button:hover,
+.left-column button:hover,
+.promo-button:hover {
+  background-color: white;
+  color: black;
+}
+
+
+.lookbook {
+  display: flex;
+  flex-direction: column; /* Arrange children in a column layout */
+  align-items: center; /* Center the content horizontally */
+  padding: 20px; /* Add some padding */
+}
+
+.lookbook h1 {
+  margin-bottom: 20px; /* Space between heading and images */
+}
+
+.lookbook-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 0; /* Remove space between columns */
+  max-width: 100%; /* Ensure container doesn't overflow */
+  flex-wrap: wrap; /* Allow wrapping if needed */
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Remove space between images within the column */
+  margin: 10px; /* Remove margin between columns */
+}
+
+.column img, .placeholder {
+  width: 100%; /* Ensure images and placeholders take full width of the column */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.top-image {
+  height: 25%;
+}
+
+.bottom-image {
+  height: 75%;
+}
+
+.large-image {
+  height: 75%;
+}
+
+.placeholder {
+  background-color: #3b3939; /* Placeholder background color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25%;
+}
+
+.placeholder span {
+  font-size: 100px;
+  color: #c7c7c770;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .lookbook-container {
+    flex-direction: column; /* Stack columns vertically on smaller screens */
+  }
+}
